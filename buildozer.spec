@@ -14,7 +14,7 @@ source.dir = .
 source.include_exts = 
 
 # (list) List of inclusions using pattern matching
-#source.include_patterns = assets/*,images/*.png,images/*.jpg,fonts/*.ttf
+source.include_patterns = assets/*,images/*.png,images/*.jpg,fonts/*.ttf
 
 # (list) Source files to exclude (let empty to not exclude anything)
 #source.exclude_exts = spec
@@ -65,7 +65,7 @@ orientation = portrait
 osx.python_version = 3
 
 # Kivy version to use
-osx.kivy_version = 1.9.1
+osx.kivy_version = 2.3.0
 
 #
 # Android specific
