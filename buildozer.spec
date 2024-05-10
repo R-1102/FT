@@ -1,47 +1,59 @@
 [app]
-
-# Title of your application
+# (str) Title of your application
 title = Fitness Tracker
 
-# Package name
+# (str) Package name
 package.name = fitnesstracker
 
-# Package domain (needed for android/ios packaging)
+# (str) Package domain (needed for android/ios packaging)
 package.domain = org.test
 
-# Source code directory where the main.py lives
+# (str) Source code where the main.py live
 source.dir = .
 
-# Source files to include (let empty to include all the files)
-source.include_exts =
+# (list) Source files to include (let empty to include all the files)
+source.include_exts = 
 
-# List of inclusions using pattern matching
-source.include_patterns = assets/*,images/*.png,images/*.jpg,fonts/*.ttf
+# (list) List of inclusions using pattern matching
+#source.include_patterns = assets/*,images/*.png,images/*.jpg,fonts/*.ttf
 
-# Application versioning
+# (list) Source files to exclude (let empty to not exclude anything)
+#source.exclude_exts = spec
+
+# (list) List of directory to exclude (let empty to not exclude anything)
+#source.exclude_dirs = tests, bin, venv
+
+# (list) List of exclusions using pattern matching
+# Do not prefix with './'
+#source.exclude_patterns = license,images/*/*.jpg
+
+# (str) Application versioning (method 1)
 version = 0.1
 
-# Application requirements
+# (list) Application requirements
 requirements = python3,kivy,kivymd,opencv-python,tensorflow,firebase-admin,requests,Pillow
 
-# Presplash of the application
+# (str) Presplash of the application
 presplash.filename = %(source.dir)s/logo1.png
 
-# Icon of the application
+# (str) Icon of the application
 icon.filename = %(source.dir)s/logo1.png
 
-# Supported orientations
+# (list) Supported orientations
+# Valid options are: landscape, portrait, portrait-reverse or landscape-reverse
 orientation = portrait
 
-# Android Permissions
+# (str) Android entry point
+#android.entrypoint = org.kivy.android.PythonActivity
+
+# (list) Permissions
+# (See https://python-for-android.readthedocs.io/en/latest/buildoptions/#build-options-1 for all the supported syntaxes and properties)
 android.permissions = INTERNET, CAMERA
 
-# Android Architectures
-android.archs = arm64-v8a, armeabi-v7a
-
-# Allow Backup
-android.allow_backup = True
-
+[buildozer]
+# Buildozer settings
+log_level = 2
+warn_on_root = 1
 # Log Level
 log_level = 2
 
